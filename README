@@ -1,0 +1,22 @@
+A simple driver to send data to a MAX7219 integrated circuit.
+
+Requires WiringPi from there: http://wiringpi.com/download-and-install/
+
+
+int max7219_init(int channel, int speed, int count);
+
+int max7219_send_data(int id, uint8_t address, uint8_t data);
+int max7219_send_data_cascade(uint8_t *address, uint8_t *data, int l);
+int max7219_send_data_all(uint8_t address, uint8_t data);
+
+int max7219_set_shutdown(int id, uint8_t mode);
+int max7219_set_shutdown_all(uint8_t mode);
+
+int max7219_set_decode(int id, uint8_t mode);
+int max7219_set_decode_all(uint8_t mode);
+
+int max7219_test(int id);
+int max7219_test_all(void);
+
+int max7219_set_intensity(int id, uint8_t intensity);
+int max7219_set_intensity_all(uint8_t intensity);
